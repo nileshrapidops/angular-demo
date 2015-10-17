@@ -1,0 +1,46 @@
+<div style="margin:50px;">
+	<form name="saveProductForm" id="saveProductForm" class="form-horizontal" novalidate>
+		<div class="form-inline" style="padding-bottom:15px;">
+			<!-- <div class="form-group"> -->
+				<label class="col-sm-2 control-label">Product Name&nbsp;<sup style="color:red;">*</sup></label>
+			<!-- </div> -->
+			<div class="form-group" style="padding-left:10px;">
+				<input type="text" class="form-control" style="width:400px;" name="productName" ng-model="vm.productName" placeholder="Product Name" required />
+				<div class="alert-danger" style="width:400px;" ng-show="saveProductForm.productName.$error.required && saveProductForm.$submitted || saveProductForm.productName.$touched && saveProductForm.productName.$error.required">
+					Please enter product name.
+				</div>
+			</div>
+		</div>
+		<div class="form-inline" style="padding-bottom:15px;">
+			<!-- <div class="form-group"> -->
+				<label class="col-sm-2 control-label">Price&nbsp;<sup style="color:red;">*</sup></label>
+			<!-- </div> -->
+			<div class="form-group" style="padding-left:10px;">
+				<input type="text" class="form-control" style="width:400px;" name="productPrice" id="productPrice" ng-model="vm.productPrice" placeholder="Last Name" required />
+				<div class="has-error alert-danger" style="width:400px;" ng-show="saveProductForm.productPrice.$error.required && saveProductForm.$submitted || saveProductForm.productPrice.$touched && saveProductForm.productPrice.$error.required">
+					Please enter product price.
+				</div>
+			</div>
+		</div>
+		<div class="form-inline" style="padding-bottom:15px;">
+			<!-- <div class="form-group"> -->
+			<label class="col-sm-2 control-label">Description</label>
+			<div class="form-group" style="padding-left:10px;">
+				<input type="text" class="form-control" style="width:400px;" name="productDesc" id="productDesc" ng-model="vm.productDesc" placeholder="Last Name"/>
+			</div>
+		</div>
+		<div class="form-inline" style="padding-bottom:15px;">
+			<!-- <div class="form-group"> -->
+			<label class="col-sm-2 control-label">Active</label>
+			<div class="form-group" style="padding-left:10px;">
+				<input type="checkbox" class="form-control" name="active" id="active" ng-model="vm.active"/>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-sm btn-primary m-r-xs" ng-click="vm.SaveProduct();">Save</button>
+				<button type="button" ui-sref="app.products.list" class="btn btn-sm btn-default m-r-xs" >Cancel</button>
+			</div>
+		</div>
+	</form>
+</div>	

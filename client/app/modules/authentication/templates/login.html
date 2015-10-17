@@ -1,0 +1,40 @@
+<div class="container" style="margin-top:30px;">
+	<div class="col-md-4" style="float: none;margin: 0 auto; padding-top: 30px;">
+		<div class="panel panel-default">
+			<div class="panel-heading"><h3>Angular Demo</h3></div>
+			<div class="panel-body">
+				<label class="alert-danger" ng-hide="vm.isValidUser" id="invalidUserError">
+					{{vm.authMessage}}
+				</label>
+				<form name="loginForm" id="loginForm" novalidate>
+					<div class="form-group">
+						<label for="email">User Email&nbsp;<sup style="color:red;">*</sup></label>
+						<input type="email" name="email" id="email" 
+								class="form-control"
+								placeholder="Enter email"
+								ng-model="vm.email"
+								required>
+						<div ng-show="loginForm.$submitted || loginForm.email.$touched" id="emailError">
+							<span class="alert-danger" ng-show="loginForm.email.$error.required">
+								Please provide user email.
+							</span>
+							<span class="alert-danger" ng-show="loginForm.email.$error.email">
+								Please provide valid user email.
+							</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="password">Password&nbsp;<sup style="color:red;">*</sup> </label>
+						<input type="password" name="password" class="form-control" id="password" placeholder="Password" ng-model="vm.password" required>
+						<div ng-show="loginForm.$submitted || loginForm.password.$touched" id="passwordError">
+							<span class="alert-danger" ng-show="loginForm.password.$error.required">
+								Please provide password.
+							</span>
+						</div>
+					</div>
+					<button type="submit" id="loginBtn" ng-click="vm.DoLogin();" class="btn btn-default">Sign in</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,15 @@
+{
+	"name": "angular-demo",
+	"version": "0.0.0",
+	"dependencies": {
+		"angular": "1.4.4",
+		"jquery": "2.1.4",
+		"ui-router": "0.2.15",
+		"bootstrap": "3.3.5",
+		"ng-lodash": "0.2.3",
+		"ag-grid": "1.13.0"
+	},
+	"resolutions": {
+		"angular": ">=1.2.x <=1.4.x"
+	}
+}
