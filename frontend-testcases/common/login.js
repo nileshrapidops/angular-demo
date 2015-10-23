@@ -13,20 +13,4 @@ module.exports.login = function(username, password){
 	return client.setValue('#email', username)
 		.setValue('#password', password)
 		.click('#loginBtn');
-
-	// enter username
-	// client.setValue('#email', username, function(err){
-	// 	errorScreenShot(err, 'Entering user email error should be null');
-	// 	// enter password
-	// 	client.setValue('#password', password, function(err){
-	// 		errorScreenShot(err, 'Entering password error should be null');
-	// 		// click on login button
-	// 		client.click('#loginBtn', function(err){
-	// 			errorScreenShot(err, 'Clicking on login button error should be null');
-	// 			client.pause(1000, function(err){
-	// 				callback();
-	// 			});
-	// 		});
-	// 	});
-	// });
 };
